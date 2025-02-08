@@ -52,7 +52,7 @@ let currentQuestion = {};
 let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 9;
 
 function startQuiz() {
     score = 0;
@@ -70,6 +70,10 @@ function updateQuestionPool() {
         questionPool = [...mediumQuestions];
     } else if (currentDifficulty === "hard") {
         questionPool = [...hardQuestions];
+    }
+
+    if (prevDifficulty !== currentDifficulty) {
+        usedQuestions.clear();
     }
 }
 
