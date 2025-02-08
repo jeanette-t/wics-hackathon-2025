@@ -6,7 +6,6 @@
 }
 .quiz{
     padding-top: 30px;  
-    
 }
 
 h2, p{
@@ -25,15 +24,14 @@ body{
     align-self: center;
 }
 #question{
-    color: #674c2d;
+    color: #ffffff;
 }
 
 h1{
-    font-size: 40px;
-    
+    font-size: 40px; 
     color: #faf8f7;
     font-weight: 600;
-    border-bottom: 4px solid #333;
+    border-bottom: 4px solid #5b320f;
     padding-bottom: 20px;
     text-align: center;
 }
