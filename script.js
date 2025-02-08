@@ -80,9 +80,8 @@ function updateQuestionPool() {
 function getNewQuestion() {
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
-        setTimeout(() => {
-            window.location.replace("results.html");
-        }, 1000);
+        // Show the results button instead of redirecting
+        document.getElementById("results-button").style.display = "block";
         return;
     }
 
@@ -105,6 +104,13 @@ function getNewQuestion() {
 
     progressBar.style.width = ((usedQuestions.size / MAX_QUESTIONS) * 100) + "%";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const resultsButton = document.getElementById("results-button");
+    resultsButton.addEventListener("click", () => {
+        window.location.href = "results.html";
+    });
+});
 
 choices.forEach(choice => {
     choice.addEventListener("click", (e) => {
