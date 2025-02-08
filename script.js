@@ -78,7 +78,6 @@ function updateQuestionPool() {
 }
 
 function getNewQuestion() {
-    print(MAX_QUESTIONS);
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
         setTimeout(() => {
