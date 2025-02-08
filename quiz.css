@@ -17,7 +17,7 @@ h2, p{
 }
 
 body{
-    background: linear-gradient(180deg, #d28b3c, #A7A77D);
+    background:  #d28b3c;
     height: 800px;
 }
 
@@ -25,7 +25,7 @@ body{
 h1{
     font-size: 40px;
     background-color: #d28b3c;
-    color: #6b4226;
+    color: #faf8f7;
     font-weight: 600;
     border-bottom: 4px solid #333;
     padding-bottom: 20px;
