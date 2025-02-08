@@ -17,9 +17,10 @@
 }
 
 body{
-    background: linear-gradient(180deg, #EDC9AF, #B7410E);
+    background: linear-gradient(180deg, #B7410E, #EDC9AF);
     height: 800px;
 }
+B7410E
 
 h1{
     font-size: 40px;
