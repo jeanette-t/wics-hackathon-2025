@@ -1,36 +1,34 @@
 body {
-    font-size: 20px;
     font-family: 'Georgia', serif;
-    background-color: #FFF5E1; 
+    background-color: #F4E1C6; 
     color: #4A2C2A; 
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-
+/* Main Container */
 .quiz-container {
     width: 80%;
     max-width: 700px;
-    background: #FFF8E1; 
+    background: #FFF8E1; /* Aged parchment effect */
     margin: 50px auto;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
+    border: 3px solid #8B4513; /* Saddle Brown border */
 }
 
-
+/* Headings */
 h1, h2 {
-    color: #BF5700; 
+    color: #6B3E26; /* Rich leather brown */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Buttons */
 button {
     display: block;
-    width: 50%;
-    max-width: 250px;
+    width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: none;
@@ -39,45 +37,43 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #BF5700, #8B4513); 
+    background: linear-gradient(to bottom, #B7410E, #8B4513); /* Leather-like gradient */
     color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
-}
-
-.next-btn {
-    width: 20%;
-    font-size: 15px;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #D2691E, #A0522D); 
+    background: linear-gradient(to bottom, #D2691E, #A0522D); /* Warmer leather tone */
     transform: scale(1.05);
 }
 
-
+/* Question Box */
 #question {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+
 .option-btn {
-    background: #BF5700; 
+    background: #A0522D; /* Dark saddle brown */
     color: #FFF8E1;
     border: 2px solid #6B3E26;
 }
 
 .option-btn:hover {
-    background: #8B4513; 
+    background: #CC5500; /* Burnt orange */
 }
+
 
 #score {
     font-size: 20px;
     margin-top: 15px;
     font-weight: bold;
-    color: #BF5700;
+    color: #8B4513;
 }
+
 
 .container::before {
     content: "🤠";
@@ -89,12 +85,4 @@ button:hover {
 
 .quiz-container {
     position: relative;
-    border-image: url('https://www.transparenttextures.com/patterns/wood.png') 30; /* Adds a subtle wooden texture */
-}
-
-.footer {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #8B4513;
-    font-weight: bold;
 }
