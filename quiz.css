@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Georgia', serif;
     box-sizing: border-box;
 }
 .quiz{
@@ -17,7 +17,7 @@
 }
 
 body{
-    background: linear-gradient(180deg, #47a5f7, #4830ff);
+    background: linear-gradient(180deg, #EDC9AF, #B7410E);
     height: 800px;
 }
 
@@ -64,4 +64,25 @@ h1{
 
 .btn:hover{
     border: 5px solid #001e4d;
+}
+
+.next-btn {
+    background: #001e4d;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100px;
+    border: 2px solid #222;
+    padding: 10px;
+    margin: 10px auto 0 540px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    display: none; 
+
+}
+.next-btn:hover {
+    background: #fff;
+    color:#001e4d
+
 }
