@@ -76,7 +76,9 @@ function updateQuestionPool() {
 function getNewQuestion() {
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
-        setTimeout(() => window.location.href = "results.html", 1000);
+        setTimeout(() => { 
+            window.location.href = "/results.html"; 
+        }, 1000);
         return;
     }
 
