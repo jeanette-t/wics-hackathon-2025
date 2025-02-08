@@ -17,14 +17,14 @@ h2, p{
 }
 
 body{
-    background:  #d28b3c;
+    background:  #d7a367;
     height: 800px;
 }
 
 
 h1{
     font-size: 40px;
-    background-color: #d7a367;
+    
     color: #faf8f7;
     font-weight: 600;
     border-bottom: 4px solid #333;
