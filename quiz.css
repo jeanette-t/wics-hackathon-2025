@@ -1,38 +1,34 @@
-/* Import a Western-style Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
 body {
-    font-family: 'Special Elite', serif; /* Classic Western-style font */
-    background-color: #FFF5E1; /* Warm parchment background */
-    color: #4A2C2A; /* Deep brown text */
+    font-family: 'Georgia', serif;
+    background-color: #FFF5E1; 
+    color: #4A2C2A; 
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Main Container */
+
 .quiz-container {
     width: 80%;
     max-width: 700px;
-    background: #FFF8E1; /* Aged parchment effect */
+    background: #FFF8E1; 
     margin: 50px auto;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    border: 4px solid #BF5700; /* Burnt Orange Border */
     position: relative;
 }
 
-/* Headings */
+
 h1, h2 {
-    color: #BF5700; /* Texas Longhorn Burnt Orange */
+    color: #BF5700; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Buttons */
+
 button {
     display: block;
-    width: 100%;
+    width: 70%;
     padding: 12px;
     margin: 10px 0;
     border: none;
@@ -41,36 +37,39 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #BF5700, #8B4513); /* Burnt Orange to Leather Brown */
+    background: linear-gradient(to bottom, #BF5700, #8B4513); 
     color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
+.next-btn {
+    width: 30%;
+    font-size: 15px;
+}
+
 button:hover {
-    background: linear-gradient(to bottom, #D2691E, #A0522D); /* Warmer saddle brown */
+    background: linear-gradient(to bottom, #D2691E, #A0522D); 
     transform: scale(1.05);
 }
 
-/* Question Box */
+
 #question {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Options */
 .option-btn {
-    background: #BF5700; /* Texas Longhorn Burnt Orange */
+    background: #BF5700; 
     color: #FFF8E1;
     border: 2px solid #6B3E26;
 }
 
 .option-btn:hover {
-    background: #8B4513; /* Saddle brown */
+    background: #8B4513; 
 }
 
-/* Score Display */
 #score {
     font-size: 20px;
     margin-top: 15px;
@@ -78,9 +77,8 @@ button:hover {
     color: #BF5700;
 }
 
-/* Western & Texas Themed Decorative Elements */
-.container::before {
-    content: "🐂"; /* Longhorn Emoji */
+.container {
+    content: "🤠"; 
     font-size: 50px;
     display: block;
     text-align: center;
@@ -89,10 +87,8 @@ button:hover {
 
 .quiz-container {
     position: relative;
-    border-image: url('https://www.transparenttextures.com/patterns/wood.png') 30; /* Adds a subtle wooden texture */
 }
 
-/* Footer */
 .footer {
     margin-top: 20px;
     font-size: 14px;
