@@ -60,7 +60,7 @@ function startQuiz() {
     incorrectStreak = 0;
     usedQuestions.clear(); // Reset used questions tracker
     updateQuestionPool();
-    newQuestion();
+    getNewQuestion();
 }
 
 function updateQuestionPool() {
