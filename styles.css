@@ -1,21 +1,94 @@
+/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 80%;
-    max-width: 600px;
-    background: white;
-    margin: 50px auto;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-h1, h2 {
+    background-color: #fdf6e3;
     color: #333;
+}
+
+.header {
+    background-color: #6b4226;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: url('cowboy-theme.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #d28b3c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #b06c2b;
+}
+
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.mission {
+    background-color: #f9efe3;
+}
+
+.diagnostic {
+    background-color: #f4e8d9;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6b4226;
+    color: #fff;
 }
