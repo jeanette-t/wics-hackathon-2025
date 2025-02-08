@@ -14,5 +14,5 @@ document.getElementById("storyForm").addEventListener("submit", function(event) 
     localStorage.setItem("storyData", JSON.stringify(userData));
 
     // Redirect to the next page where the story is generated
-    window.location.href = "results.html";
+    window.location.href = "story.html";
 });
