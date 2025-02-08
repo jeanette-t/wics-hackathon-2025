@@ -121,7 +121,7 @@ choices.forEach(choice => {
             currentDifficulty = currentDifficulty === "easy" ? "medium" : "hard";
             correctStreak = 0;
             updateQuestionPool();
-        } else if (incorrectStreak === 3 && currentDifficulty !== "easy") {
+        } else if (incorrectStreak === 2 && currentDifficulty !== "easy") {
             currentDifficulty = currentDifficulty === "hard" ? "medium" : "easy";
             incorrectStreak = 0;
             updateQuestionPool();
