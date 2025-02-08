@@ -30,8 +30,9 @@ h1, h2 {
 
 button {
     display: block;
-    width: 70%;
-    padding: 12px;
+    width: 50%;
+    max-width: 250px;
+    padding: 10px;
     margin: 10px 0;
     border: none;
     font-size: 18px;
@@ -42,7 +43,7 @@ button {
     background: linear-gradient(to bottom, #BF5700, #8B4513); 
     color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .next-btn {
