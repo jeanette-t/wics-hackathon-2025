@@ -87,6 +87,10 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.quiz-container {
+    position: relative;
+    border-image: url('https://www.transparenttextures.com/patterns/wood.png') 30; /* Adds a subtle wooden texture */
+}
 
 .footer {
     margin-top: 20px;
