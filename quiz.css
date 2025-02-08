@@ -17,14 +17,15 @@ h2, p{
 }
 
 body{
-    background: linear-gradient(180deg, #f8edb5, #A7A77D);
+    background: linear-gradient(180deg, #d28b3c, #A7A77D);
     height: 800px;
 }
 
 
 h1{
     font-size: 40px;
-    color: #001e4d;
+    background-color: #d28b3c;
+    color: #6b4226;
     font-weight: 600;
     border-bottom: 4px solid #333;
     padding-bottom: 20px;
@@ -53,7 +54,7 @@ h1{
     color: #222;
     font-size: 19px;
     font-weight: 600;
-    width: 100%;
+    width: 70%;
     border: 2px solid #222;
     padding: 20px;
     margin: 10px 0;
