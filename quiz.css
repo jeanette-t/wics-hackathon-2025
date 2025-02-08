@@ -21,6 +21,12 @@ body{
     height: 800px;
 }
 
+.quiz{
+    align-self: center;
+}
+#question{
+    color: #674c2d;
+}
 
 h1{
     font-size: 40px;
