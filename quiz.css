@@ -1,100 +1,91 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+    font-family: 'Special Elite', serif; /* Classic Western-style font */
+    background-color: #F4E1C6; /* Warm parchment background */
+    color: #4A2C2A; /* Deep brown text */
+    text-align: center;
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif;
-    box-sizing: border-box;
-}
-.quiz{
-    padding-top: 30px;  
-    align-content: center;
 }
 
-h2, p{
-    font-size: 22px;
-    color: #3b0606;
-    font-weight: 600;
-    padding-bottom: 10px;
+/* Main Container */
+.quiz-container {
+    width: 80%;
+    max-width: 700px;
+    background: #FFF8E1; /* Aged parchment effect */
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #8B4513; /* Saddle Brown border */
 }
 
-body{
-    background:  #d7a367;
-    height: 800px;
+/* Headings */
+h1, h2 {
+    color: #6B3E26; /* Rich leather brown */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.quiz{
-    align-self: center;
-}
-#question{
-    color: #ffffff;
-}
-
-h1{
-    font-size: 40px; 
-    color: #faf8f7;
-    font-weight: 600;
-    border-bottom: 4px solid #5b320f;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-#options{
-    align-items: center;
-}
-
-#progress {
+/* Buttons */
+button {
+    display: block;
     width: 100%;
-    background-color:#efefef;
-    margin-top: 0px;
-    margin-bottom: 40px; 
-    border: 2px solid #f5f7f9;
-    border-radius: 6px;
-
-}
-#progress-bar {
-    height: 30px;
-    background-color:#ec8d21;
-    border-radius: 2px;
-    width:0%;
-    transition: all ease-in-out 0.5s;
-}
-
-.btn{
-    background: #fff;
-    color: #ec8d21;
-    font-size: 19px;
-    font-weight: 600;
-    width: 70%;
-    border: 2px solid #ec8d21;
-    padding: 20px;
+    padding: 12px;
     margin: 10px 0;
-    text-align: center;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3;
-}
-
-.btn:hover{
-    border: 5px solid #ec8d21;
-    color: #fdfdfc;
-}
-
-.next-btn {
-    background: #001e4d;
-    color:#fff;
+    border: none;
     font-size: 18px;
-    font-weight: 500;
-    width: 100px;
-    border: 2px solid #222;
-    padding: 10px;
-    margin: 10px auto 0 540px;
-    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    
-    display: none; 
-
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #B7410E, #8B4513); /* Leather-like gradient */
+    color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
-.next-btn:hover {
-    background: #fff;
-    color:#001e4d
 
+button:hover {
+    background: linear-gradient(to bottom, #D2691E, #A0522D); /* Warmer leather tone */
+    transform: scale(1.05);
+}
+
+/* Question Box */
+#question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Options */
+.option-btn {
+    background: #A0522D; /* Dark saddle brown */
+    color: #FFF8E1;
+    border: 2px solid #6B3E26;
+}
+
+.option-btn:hover {
+    background: #CC5500; /* Burnt orange */
+}
+
+/* Score Display */
+#score {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+/* Western Themed Decorative Elements */
+.container::before {
+    content: "🤠";
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.quiz-container {
+    position: relative;
+    border-image: url('https://www.transparenttextures.com/patterns/wood.png') 30; /* Adds a subtle wooden texture */
 }
