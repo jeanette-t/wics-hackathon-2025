@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fdf6e3;
-    color: #333;
+    color: #32312f;
     line-height: 1.6;
 }
 
@@ -69,7 +69,6 @@ body {
 }
 
 .cta-button {
-    font-family: inherit;
     background-color: #d28b3c;
     color: #fff;
     padding: 0.75rem 1.5rem;
@@ -93,7 +92,7 @@ body {
 }
 
 .mission {
-    background-color: #39260e;
+    background-color: #f9efe3;
     border-radius: 10px;
     margin: 1rem auto;
 }
