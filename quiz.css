@@ -11,13 +11,13 @@
 
 h2, p{
     font-size: 22px;
-    color: #001e4d;
+    color: #3b0606;
     font-weight: 600;
     padding-bottom: 10px;
 }
 
 body{
-    background: linear-gradient(180deg, #EDC9AF, #B7410E);
+    background: linear-gradient(180deg, #EDC9AF, #A7A77D);
     height: 800px;
 }
 
