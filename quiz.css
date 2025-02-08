@@ -1,8 +1,9 @@
+/* Import a Western-style Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 body {
     font-family: 'Special Elite', serif; /* Classic Western-style font */
-    background-color: #F4E1C6; /* Warm parchment background */
+    background-color: #FFF5E1; /* Warm parchment background */
     color: #4A2C2A; /* Deep brown text */
     text-align: center;
     margin: 0;
@@ -18,12 +19,13 @@ body {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    border: 3px solid #8B4513; /* Saddle Brown border */
+    border: 4px solid #BF5700; /* Burnt Orange Border */
+    position: relative;
 }
 
 /* Headings */
 h1, h2 {
-    color: #6B3E26; /* Rich leather brown */
+    color: #BF5700; /* Texas Longhorn Burnt Orange */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -39,14 +41,14 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #B7410E, #8B4513); /* Leather-like gradient */
+    background: linear-gradient(to bottom, #BF5700, #8B4513); /* Burnt Orange to Leather Brown */
     color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #D2691E, #A0522D); /* Warmer leather tone */
+    background: linear-gradient(to bottom, #D2691E, #A0522D); /* Warmer saddle brown */
     transform: scale(1.05);
 }
 
@@ -59,13 +61,13 @@ button:hover {
 
 /* Options */
 .option-btn {
-    background: #A0522D; /* Dark saddle brown */
+    background: #BF5700; /* Texas Longhorn Burnt Orange */
     color: #FFF8E1;
     border: 2px solid #6B3E26;
 }
 
 .option-btn:hover {
-    background: #CC5500; /* Burnt orange */
+    background: #8B4513; /* Saddle brown */
 }
 
 /* Score Display */
@@ -73,13 +75,13 @@ button:hover {
     font-size: 20px;
     margin-top: 15px;
     font-weight: bold;
-    color: #8B4513;
+    color: #BF5700;
 }
 
-/* Western Themed Decorative Elements */
+/* Western & Texas Themed Decorative Elements */
 .container::before {
-    content: "🤠";
-    font-size: 40px;
+    content: "🐂"; /* Longhorn Emoji */
+    font-size: 50px;
     display: block;
     text-align: center;
     margin-bottom: 10px;
@@ -88,4 +90,12 @@ button:hover {
 .quiz-container {
     position: relative;
     border-image: url('https://www.transparenttextures.com/patterns/wood.png') 30; /* Adds a subtle wooden texture */
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8B4513;
+    font-weight: bold;
 }
