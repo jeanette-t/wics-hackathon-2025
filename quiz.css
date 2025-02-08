@@ -7,25 +7,25 @@ body {
     padding: 0;
 }
 
-/* Main Container */
+
 .quiz-container {
     width: 80%;
     max-width: 700px;
-    background: #FFF8E1; /* Aged parchment effect */
+    background: #FFF8E1; 
     margin: 50px auto;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    border: 3px solid #8B4513; /* Saddle Brown border */
+    border: 3px solid #8B4513; 
 }
 
-/* Headings */
+
 h1, h2 {
-    color: #6B3E26; /* Rich leather brown */
+    color: #6B3E26; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Buttons */
+
 button {
     display: block;
     width: 100%;
@@ -37,14 +37,14 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #B7410E, #8B4513); /* Leather-like gradient */
+    background: linear-gradient(to bottom, #B7410E, #8B4513); 
     color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #D2691E, #A0522D); /* Warmer leather tone */
+    background: linear-gradient(to bottom, #D2691E, #A0522D); 
     transform: scale(1.05);
 }
 
@@ -66,7 +66,22 @@ button:hover {
     background: #CC5500; /* Burnt orange */
 }
 
+#progress {
+    width: 100%;
+    background-color:#efefef;
+    margin-top: 0px;
+    margin-bottom: 40px; 
+    border: 2px solid #A0522D;
+    border-radius: 6px;
 
+}
+#progress-bar {
+    height: 30px;
+    background-color:#A0522D;
+    border-radius: 2px;
+    width:0%;
+    transition: all ease-in-out 0.5s;
+}    
 #score {
     font-size: 20px;
     margin-top: 15px;
