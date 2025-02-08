@@ -1,0 +1,138 @@
+/* results.css */
+.results-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('western-landscape.jpg');
+    padding: 4rem 2rem;
+}
+
+.results-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.results-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-container {
+    margin-bottom: 2rem;
+}
+
+.level-badge {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.score-section {
+    margin: 2rem 0;
+}
+
+.score-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #6b4226;
+    margin: 1rem 0;
+}
+
+.level-info {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.recommendations {
+    background: #f9efe3;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.recommendations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendations li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Level-specific styles */
+.level-horse {
+    border-top: 5px solid #8B4513;
+}
+
+.level-horse .level-info {
+    background: #f5d6a7;
+}
+
+.level-cowboy {
+    border-top: 5px solid #d28b3c;
+}
+
+.level-cowboy .level-info {
+    background: #fad6aa;
+}
+
+.level-sheriff {
+    border-top: 5px solid #FFD700;
+}
+
+.level-sheriff .level-info {
+    background: #fff3cd;
+}
+
+/* Button styles */
+.retry-btn {
+    background-color: #6b4226;
+}
+
+.start-journey-btn {
+    background-color: #d28b3c;
+}
+
+.retry-btn:hover, .start-journey-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .score-display {
+        font-size: 2.5rem;
+    }
+    
+    .results-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.results-card {
+    animation: fadeIn 0.8s ease-out;
+}

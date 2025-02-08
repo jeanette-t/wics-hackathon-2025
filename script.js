@@ -52,7 +52,7 @@ let currentQuestion = {};
 let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 5;
 
 function startQuiz() {
     score = 0;
@@ -76,7 +76,7 @@ function updateQuestionPool() {
 function getNewQuestion() {
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
-        setTimeout(() => window.location.assign("/end.html"), 1000);
+        setTimeout(() => window.location.assign("results.html"), 1000);
         return;
     }
 

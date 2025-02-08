@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Results - Lassos & Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Lassos & Learn</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="quiz.html">Diagnostic</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero results-hero">
+            <h1>Trail Results</h1>
+            <p>Your reading adventure begins here!</p>
+        </section>
+
+        <div class="results-container">
+            <div class="results-card">
+                <div class="badge-container">
+                    <img id="levelBadge" src="" alt="Level Badge" class="level-badge">
+                </div>
+                
+                <div class="score-section">
+                    <h2>Your Score</h2>
+                    <div class="score-display" id="finalScore">0/9</div>
+                </div>
+
+                <div class="level-info">
+                    <h2 id="levelTitle">Your Trail Level</h2>
+                    <p id="levelDescription"></p>
+                </div>
+
+                <div class="recommendations">
+                    <h3>Your Learning Path</h3>
+                    <div id="recommendedContent"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="quiz.html" class="cta-button retry-btn">Retake Quiz</a>
+                    <a href="index.html" class="cta-button start-journey-btn">Start Journey</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Lassos & Learn. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const score = localStorage.getItem('totalScore') || 0;
+            const maxScore = 9;
+            const percentage = (score / maxScore) * 100;
+
+            // Update score display
+            document.getElementById('finalScore').textContent = `${score}/${maxScore}`;
+
+            // Determine level based on score
+            let level, description, recommendations;
+            if (percentage < 40) {
+                level = 'Rancher';
+                description = 'You\'re at the beginning of your trail! Just like a trusty rancher, you\'ve got the spirit to learn and grow.';
+                recommendations = `
+                    <ul>
+                        <li>🌟 Start with basic reading exercises</li>
+                        <li>🎯 Focus on fundamental grammar rules</li>
+                        <li>📚 Practice with simple Western tales</li>
+                    </ul>`;
+            } else if (percentage < 75) {
+                level = 'Cowboy';
+                description = 'Yeehaw! You\'re riding strong on the learning trail with solid reading skills.';
+                recommendations = `
+                    <ul>
+                        <li>🌟 Challenge yourself with intermediate stories</li>
+                        <li>🎯 Explore complex sentence structures</li>
+                        <li>📚 Try our Western adventure writing prompts</li>
+                    </ul>`;
+            } else {
+                level = 'Sheriff';
+                description = 'Congratulations, Sheriff! You\'ve shown mastery of the reading trail!';
+                recommendations = `
+                    <ul>
+                        <li>🌟 Take on advanced reading challenges</li>
+                        <li>🎯 Master complex grammar concepts</li>
+                        <li>📚 Create your own Western adventures</li>
+                    </ul>`;
+            }
+
+            // Update content
+            document.getElementById('levelTitle').textContent = `${level} Level`;
+            document.getElementById('levelDescription').textContent = description;
+            document.getElementById('recommendedContent').innerHTML = recommendations;
+            document.querySelector('.results-card').classList.add(`level-${level.toLowerCase()}`);
+        });
+    </script>
+</body>
+</html>
