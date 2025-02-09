@@ -7,36 +7,36 @@ const easyQuestions = [
         correct: 2 
     },
     { question: "EASY: This apple tastes __ the red one.", choice1: "more sweet", choice2: "more sweet than", choice3: "sweeter", choice4: "sweeter than", correct: 4 },
-    { question: "EASY: The first letter of the first word in a sentence should be", 
-        choice1: "a lowercase letter", 
-        choice2: "an uppercase letter", 
-        choice3: "a large letter", 
-        choice4: "a small letter", 
-        correct: 2 
+    { question: "EASY: Last night the game ______ 10 minutes late.", 
+        choice1: "beginned", 
+        choice2: "begin", 
+        choice3: "began", 
+        choice4: "beginning", 
+        correct: 3 
     }
 ];
 
 const mediumQuestions = [
     { question: "MEDIUM: _______ washing his sweater, Jacob hung it up to dry", choice1: "After", choice2: "Before", choice3: "By", choice4: "Until", correct: 1 },
     { question: "MEDIUM: _______ you get a new haircut?", choice1: "Have", choice2: "Does", choice3: "Are", choice4: "Did", correct: 4 },
-    { question: "MEDIUM: The first letter of the first word in a sentence should be", 
-        choice1: "a lowercase letter", 
-        choice2: "an uppercase letter", 
-        choice3: "a large letter", 
-        choice4: "a small letter", 
-        correct: 2 
+    { question: "MEDIUM: The dog ______ his finger.", 
+        choice1: "bit", 
+        choice2: "biting", 
+        choice3: "bite", 
+        choice4: "bited", 
+        correct: 1 
     }
 ];
 
 const hardQuestions = [
     { question: "HARD: Water __________ at a temperature of zero degrees Celsius.", choice1: "having frozen", choice2: "freezing", choice3: "freeze", choice4: "freezes", correct: 4 },
     { question: "HARD: Identify the correctly punctuated sentence.", choice1: "I love to read; books are my escape.", choice2: "I love to read books, are my escape.", choice3: "I love to read: books, are my escape.", choice4: "I love to read; books, are my escape.", correct: 1 },
-    { question: "HARD: The first letter of the first word in a sentence should be", 
-        choice1: "a lowercase letter", 
-        choice2: "an uppercase letter", 
-        choice3: "a large letter", 
-        choice4: "a small letter", 
-        correct: 2 
+    { question: "HARD: Bob _____ Helen the secret.", 
+        choice1: "tell", 
+        choice2: "telling", 
+        choice3: "telled", 
+        choice4: "told", 
+        correct: 2
     }
 ];
 
@@ -54,7 +54,7 @@ let currentQuestion = {};
 let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 7;
 let questionCount = 0;
 
 function startQuiz() {
