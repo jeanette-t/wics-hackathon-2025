@@ -126,7 +126,7 @@ choices.forEach(choice => {
             incorrectStreak++;
             correctStreak = 0; // Reset correct streak
         }
-        scoreElement.innerText= score;
+        scoreElement.innerText = score;
 
         if (correctStreak === 2 && currentDifficulty !== "hard" && incorrectStreak === 0) {
             // Move from easy -> medium or medium -> hard
