@@ -29,8 +29,8 @@ h1, h2 {
 .btn {
     display: block;
     width: 100%;
-    max-width: 700px;
-    max-height: 450px;
+    max-width: 650px;
+    height: 200px;
     margin: 30px 500px;
     border: none;
     font-size: 18px;
