@@ -98,8 +98,9 @@ h3 {
     margin-bottom: 10px;
 }
 
-span {
-    display: flex;
+.score {
+    display: inline-block;
+
 }
 .quiz-container {
     position: relative;
