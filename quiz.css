@@ -101,3 +101,10 @@ button:hover {
 .quiz-container {
     position: relative;
 }
+
+.bottom-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
