@@ -54,7 +54,7 @@ let currentQuestion = {};
 let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 10;
 let questionCount = 0;
 
 function startQuiz() {
@@ -86,14 +86,14 @@ function updateQuestionPool() {
 function getNewQuestion() {
     if (questionCount >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
-        document.getElementById("results-link").style.display = "block";
+        window.location.href = "results.html"; // Redirect to results page
         return;
     }
 
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
         // Show the results button instead of redirecting
-        document.getElementById("results-link").style.display = "block";
+        document.getElementById("results-button").style.display = "block";
         return;
     }
 
