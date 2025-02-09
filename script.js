@@ -79,7 +79,6 @@ function updateQuestionPool() {
 }
 
 function getNewQuestion() {
-    console.log("Fetching new question...");
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
         // Show the results button instead of redirecting
@@ -98,7 +97,7 @@ function getNewQuestion() {
     currentQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     usedQuestions.add(currentQuestion.question); // Mark as used
     
-    questionElement.innerText = (usedQuestions.size+1) + ". " + currentQuestion.question;
+    questionElement.innerText = (usedQuestions.size) + ". " + currentQuestion.question;
 
     choices.forEach((choice, index) => {
         choice.innerText = currentQuestion["choice" + (index + 1)];
