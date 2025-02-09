@@ -107,7 +107,7 @@ function getNewQuestion() {
         choice.innerText = currentQuestion["choice" + (index + 1)];
     });
 
-    progressBar.style.width = ((usedQuestions.size / MAX_QUESTIONS) * 100) + "%";
+    progressBar.style.width = ((score / MAX_QUESTIONS) * 100) + "%";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
