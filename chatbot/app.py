@@ -67,7 +67,7 @@ def generate_western_story(reading_level, user_answers, final=False):
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('personalized.html')
 
 @app.route('/start', methods=['POST'])
 def start():
