@@ -73,9 +73,9 @@ function updateQuestionPool() {
         questionPool = [...hardQuestions];
     }
 
-    // if (prevDifficulty !== currentDifficulty) {
-    //     usedQuestions.clear();
-    // }
+    if (prevDifficulty !== currentDifficulty) {
+        usedQuestions.clear();
+    }
 }
 
 function getNewQuestion() {
@@ -129,10 +129,12 @@ choices.forEach(choice => {
         // Adjust difficulty after 3 correct/incorrect answers in a row
         if (correctStreak === 2 && currentDifficulty !== "hard") {
             currentDifficulty = currentDifficulty === "easy" ? "medium" : "hard";
+            prevDifficulty = currentDifficulty;
             correctStreak = 0;
             updateQuestionPool();
         } else if (incorrectStreak === 2 && currentDifficulty !== "easy") {
             currentDifficulty = currentDifficulty === "hard" ? "medium" : "easy";
+            prevDifficulty = currentDifficulty;
             incorrectStreak = 0;
             updateQuestionPool();
         }
