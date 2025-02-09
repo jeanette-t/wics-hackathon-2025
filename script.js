@@ -118,7 +118,7 @@ function getNewQuestion() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const resultsButton = document.getElementById("results-button");
+    const resultsButton = document.getElementById("results-link");
 });
 
 choices.forEach(choice => {
