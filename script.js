@@ -40,6 +40,7 @@ const hardQuestions = [
     }
 ];
 
+let prevDifficulty = "medium";
 let currentDifficulty = "medium"; // Start at medium difficulty
 let questionPool = [...mediumQuestions]; // Initial question pool
 let usedQuestions = new Set(); // Track asked questions
@@ -78,6 +79,7 @@ function updateQuestionPool() {
 }
 
 function getNewQuestion() {
+    console.log("Fetching new question...");
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
         // Show the results button instead of redirecting
@@ -115,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 choices.forEach(choice => {
     choice.addEventListener("click", (e) => {
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
+        const selectedAnswer = selectedChoice.dataset["data-number"];
 
         const classToApply = selectedAnswer == currentQuestion.correct ? "correct" : "incorrect";
 
