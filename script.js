@@ -128,15 +128,20 @@ choices.forEach(choice => {
 
         // Adjust difficulty after 3 correct/incorrect answers in a row
         if (correctStreak === 2 && currentDifficulty !== "hard") {
+            // Move from easy -> medium or medium -> hard
             currentDifficulty = currentDifficulty === "easy" ? "medium" : "hard";
-            prevDifficulty = currentDifficulty;
-            correctStreak = 0;
-            updateQuestionPool();
-        } else if (incorrectStreak === 2 && currentDifficulty !== "easy") {
+            prevDifficulty = currentDifficulty; // Update previous difficulty
+            correctStreak = 0; // Reset correct streak after updating difficulty
+            updateQuestionPool(); // Update question pool with new difficulty
+        } 
+
+        // Adjust difficulty after 2 incorrect answers in a row
+        else if (incorrectStreak === 2 && currentDifficulty !== "easy") {
+            // Move from hard -> medium or medium -> easy
             currentDifficulty = currentDifficulty === "hard" ? "medium" : "easy";
-            prevDifficulty = currentDifficulty;
-            incorrectStreak = 0;
-            updateQuestionPool();
+            prevDifficulty = currentDifficulty; // Update previous difficulty
+            incorrectStreak = 0; // Reset incorrect streak after updating difficulty
+            updateQuestionPool(); // Update question pool with new difficulty
         }
 
         selectedChoice.classList.add(classToApply);
