@@ -108,9 +108,6 @@ function getNewQuestion() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const resultsButton = document.getElementById("results-button");
-    resultsButton.addEventListener("click", () => {
-        window.location.href = "results.html";
-    });
 });
 
 choices.forEach(choice => {
