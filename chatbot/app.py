@@ -72,11 +72,11 @@ def generate_western_story(reading_level, user_answers, final=False):
 comprehension_questions = {
     "What was the name of the Sheriff in the story?": {
         "choices": ["Ethan Blackwood", "John Smith", "William Turner", "James Hawk"],
-        "correct_answer": "Ethan Blackwood"
+        "correct_answer": "Ethan Blackwood" 
     },
-    "What animal did the Sheriff ride?": {
+    "What animal did the Sheriff ride?": { 
         "choices": ["Midnight", "Thunder", "Black Stallion", "Shadow"],
-        "correct_answer": "Midnight"
+        "correct_answer": "Midnight" 
     },
     "What was the name of the young wizard in the story?": {  # Example - adjust as needed
         "choices": ["Finnley", "Harry Potter", "Gandalf", "Luke Skywalker"],
