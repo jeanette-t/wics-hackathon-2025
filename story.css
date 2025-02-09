@@ -1,79 +1,161 @@
 body {
    font-family: 'Georgia', serif;
-   background-image: url('story-background.png');
-   background-size: cover;
-   background-position: center;
-   color: #4b2e83;
+   background-image: url('story-background.jpg');
+   min-height: 100vh;
    margin: 0;
-   padding: 0;
+   padding: 20px;
+   color: #5d4b63;
 }
 
 .container {
-   width: 60%;
-   margin: auto;
-   background: rgba(255, 255, 255, 0.8);
-   padding: 20px;
-   border-radius: 15px;
-   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-   margin-top: 50px;
-   border: 2px solid #d4a373;
+   width: 80%;
+   max-width: 800px;
+   margin: 2rem auto;
+   background: rgba(255, 255, 255, 0.95);
+   padding: 2rem;
+   border-radius: 20px;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(8px);
+   border: 3px solid rgba(255, 255, 255, 0.3);
+   animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+   0% { transform: translateY(0px); }
+   50% { transform: translateY(-10px); }
+   100% { transform: translateY(0px); }
 }
 
 h1 {
-   color: #d4a373;
-   font-size: 2.5em;
-   text-shadow: 1px 1px 3px #000;
+   color: #8b5e83;
+   font-size: 2.8em;
+   text-align: center;
+   margin-bottom: 1.5rem;
+   background: linear-gradient(45deg, #c49991, #8b5e83);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form {
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 1.5rem;
 }
 
 label {
-   font-size: 1.2em;
-   font-weight: bold;
-   color: #5a3d99;
+   font-size: 1.3em;
+   font-weight: 600;
+   color: #6a4c93;
+   margin-bottom: 0.5rem;
+   display: block;
+   transition: transform 0.3s ease;
+}
+
+label:hover {
+   transform: translateX(5px);
 }
 
 input {
-   padding: 10px;
-   font-size: 1em;
-   border: 2px solid #d4a373;
-   border-radius: 10px;
-   background: #fff4e6;
+   padding: 1rem;
+   font-size: 1.1em;
+   border: 2px solid #ffd1dc;
+   border-radius: 15px;
+   background: rgba(255, 255, 255, 0.9);
+   transition: all 0.3s ease;
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+   outline: none;
+   border-color: #8b5e83;
+   box-shadow: 0 0 0 3px rgba(139, 94, 131, 0.2);
+   transform: translateY(-2px);
 }
 
 button {
-   background-color: #d4a373;
+   background: linear-gradient(45deg, #deb887, #cd9b7a);
    color: white;
    font-size: 1.2em;
-   padding: 12px;
+   padding: 1rem;
    border: none;
-   border-radius: 10px;
+   border-radius: 15px;
    cursor: pointer;
-   transition: all 0.3s;
-   font-weight: bold;
-   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+   transition: all 0.3s ease;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 1rem;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-   background-color: #b57d50;
-   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
-   transform: scale(1.05);
+   background: linear-gradient(45deg, #cd9b7a, #deb887);
+   transform: translateY(-3px);
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+   transform: translateY(-1px);
 }
 
 .story-output {
-   margin-top: 20px;
-   padding: 20px;
-   background: #fce3c2;
-   border-radius: 10px;
-   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+   margin-top: 2rem;
+   padding: 2rem;
+   background: linear-gradient(135deg, #fff, #fef6f6);
+   border-radius: 15px;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
    display: none;
+   animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+   from { opacity: 0; transform: translateY(20px); }
+   to { opacity: 1; transform: translateY(0); }
 }
 
 .story-output h2 {
-   color: #d4a373;
-   text-shadow: 1px 1px 3px #000;
+   color: #8b5e83;
+   margin-bottom: 1rem;
+}
+
+/* Add cute decorative elements */
+.container::before {
+   content: '✨';
+   position: absolute;
+   top: -20px;
+   left: -20px;
+   font-size: 2em;
+   animation: sparkle 2s infinite;
+}
+
+.container::after {
+   content: '✨';
+   position: absolute;
+   bottom: -20px;
+   right: -20px;
+   font-size: 2em;
+   animation: sparkle 2s infinite reverse;
+}
+
+@keyframes sparkle {
+   0% { opacity: 0; transform: scale(0.8) rotate(0deg); }
+   50% { opacity: 1; transform: scale(1.1) rotate(180deg); }
+   100% { opacity: 0; transform: scale(0.8) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .container {
+       width: 90%;
+       padding: 1.5rem;
+   }
+
+   h1 {
+       font-size: 2em;
+   }
+
+   input, button {
+       padding: 0.8rem;
+   }
 }
