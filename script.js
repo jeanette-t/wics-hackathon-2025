@@ -54,7 +54,7 @@ let currentQuestion = {};
 let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 9;
 let questionCount = 0;
 
 function startQuiz() {

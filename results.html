@@ -30,7 +30,6 @@
                 <div class="badge-container">
                     <img id="levelBadge" src="" alt="Level Badge" class="level-badge">
                 </div>
-                
                 <div class="score-section">
                     <h2>Your Score</h2>
                     <div class="score-display" id="finalScore">0/9</div>
@@ -60,12 +59,21 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            
             const score = localStorage.getItem('totalScore') || 0;
             const maxScore = 9;
             const percentage = (score / maxScore) * 100;
 
             // Update score display
             document.getElementById('finalScore').textContent = `${score}/${maxScore}`;
+
+            // Badge images for different levels
+    const badgeImages = {
+        rancher: "rancher.png",
+        cowboy: "cowgirl.png",
+        sheriff: "sheriff1.png"
+    };
+
 
             // Determine level based on score
             let level, description, recommendations;
@@ -78,6 +86,8 @@
                         <li>🎯 Focus on fundamental grammar rules</li>
                         <li>📚 Practice with simple Western tales</li>
                     </ul>`;
+                    badgeImage = badgeImages.rancher;
+
             } else if (percentage < 75) {
                 level = 'Cowboy';
                 description = 'Yeehaw! You\'re riding strong on the learning trail with solid reading skills.';
@@ -87,6 +97,8 @@
                         <li>🎯 Explore complex sentence structures</li>
                         <li>📚 Try our Western adventure writing prompts</li>
                     </ul>`;
+                    badgeImage = badgeImages.cowboy;
+
             } else {
                 level = 'Sheriff';
                 description = 'Congratulations, Sheriff! You\'ve shown mastery of the reading trail!';
@@ -96,6 +108,8 @@
                         <li>🎯 Master complex grammar concepts</li>
                         <li>📚 Create personalized Western adventures</li>
                     </ul>`;
+                    badgeImage = badgeImages.sheriff;
+
             }
 
             // Update content
@@ -103,6 +117,10 @@
             document.getElementById('levelDescription').textContent = description;
             document.getElementById('recommendedContent').innerHTML = recommendations;
             document.querySelector('.results-card').classList.add(`level-${level.toLowerCase()}`);
+
+            const badgeElement = document.getElementById('levelBadge');
+    badgeElement.src = badgeImage;
+    badgeElement.alt = `${level} Badge`;
         });
     </script>
 </body>

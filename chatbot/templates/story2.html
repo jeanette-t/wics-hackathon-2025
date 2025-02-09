@@ -13,16 +13,18 @@
 
     <h2>Comprehension Quiz</h2>
     <form action="{{ url_for('comprehension') }}" method="POST">
-        {% for question, data in comprehension_questions.items() %}  <fieldset>
+        {% for question, data in comprehension_questions.items() %}  
+        <fieldset>
                 <legend>{{ question }}</legend>
                 {% for choice in data['choices'] %}
                     <label>
                         <input type="radio" name="{{ question }}" value="{{ choice }}" required> {{ choice }}
                     </label><br>
                 {% endfor %}
-            </fieldset>
+        </fieldset>
         {% endfor %}
         <button type="submit">Submit Answers</button>
+        <a href="story.html" class="cta-button"></a>
     </form>
 
 
