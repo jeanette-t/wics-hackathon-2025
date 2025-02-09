@@ -7,7 +7,7 @@ const easyQuestions = [
         correct: 2 
     },
     { question: "EASY: This apple tastes __ the red one.", choice1: "more sweet", choice2: "more sweet than", choice3: "sweeter", choice4: "sweeter than", correct: 4 },
-    { question: "EASY 3 The first letter of the first word in a sentence should be", 
+    { question: "EASY: The first letter of the first word in a sentence should be", 
         choice1: "a lowercase letter", 
         choice2: "an uppercase letter", 
         choice3: "a large letter", 
@@ -17,9 +17,9 @@ const easyQuestions = [
 ];
 
 const mediumQuestions = [
-    { question: "MEDIUM: ______ washing his sweater, Jacob hung it up to dry", choice1: "After", choice2: "Before", choice3: "By", choice4: "Until", correct: 1 },
+    { question: "MEDIUM: _______ washing his sweater, Jacob hung it up to dry", choice1: "After", choice2: "Before", choice3: "By", choice4: "Until", correct: 1 },
     { question: "MEDIUM: _______ you get a new haircut?", choice1: "Have", choice2: "Does", choice3: "Are", choice4: "Did", correct: 4 },
-    { question: "MEDIUM 3 The first letter of the first word in a sentence should be", 
+    { question: "MEDIUM: _______ The first letter of the first word in a sentence should be", 
         choice1: "a lowercase letter", 
         choice2: "an uppercase letter", 
         choice3: "a large letter", 
@@ -31,7 +31,7 @@ const mediumQuestions = [
 const hardQuestions = [
     { question: "HARD: Water __________ at a temperature of zero degrees Celsius.", choice1: "having frozen", choice2: "freezing", choice3: "freeze", choice4: "freezes", correct: 4 },
     { question: "HARD: Identify the correctly punctuated sentence.", choice1: "I love to read; books are my escape.", choice2: "I love to read books, are my escape.", choice3: "I love to read: books, are my escape.", choice4: "I love to read; books, are my escape.", correct: 1 },
-    { question: "HARD 3 The first letter of the first word in a sentence should be", 
+    { question: "HARD: The first letter of the first word in a sentence should be", 
         choice1: "a lowercase letter", 
         choice2: "an uppercase letter", 
         choice3: "a large letter", 
@@ -79,7 +79,6 @@ function updateQuestionPool() {
 }
 
 function getNewQuestion() {
-    console.log("Fetching new question...");
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
         // Show the results button instead of redirecting
@@ -98,7 +97,7 @@ function getNewQuestion() {
     currentQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     usedQuestions.add(currentQuestion.question); // Mark as used
     
-    questionElement.innerText = (usedQuestions.size+1) + ". " + currentQuestion.question;
+    questionElement.innerText = (usedQuestions.size) + ". " + currentQuestion.question;
 
     choices.forEach((choice, index) => {
         choice.innerText = currentQuestion["choice" + (index + 1)];
