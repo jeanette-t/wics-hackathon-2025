@@ -54,7 +54,7 @@ let currentQuestion = {};
 let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 9;
 let questionCount = 0;
 
 function startQuiz() {
@@ -65,6 +65,7 @@ function startQuiz() {
     updateQuestionPool();
     getNewQuestion();
 }
+
 
 function updateQuestionPool() {
     // Clear previous used questions when switching difficulty
@@ -84,30 +85,29 @@ function updateQuestionPool() {
 }
 
 function getNewQuestion() {
+    if (questionPool.length === 0) {
+        updateQuestionPool();
+    }
     if (questionCount >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
-        window.location.href = "results.html"; // Redirect to results page
+        window.location.href = "results.html";
         return;
     }
 
-    if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
-        localStorage.setItem("totalScore", score);
-        // Show the results button instead of redirecting
-        document.getElementById("results-button").style.display = "block";
-        return;
+    if (questionPool.length === 0) {
+        updateQuestionPool();
     }
 
-    // Select a new question that hasn't been used
     let availableQuestions = questionPool.filter(q => !usedQuestions.has(q.question));
-    
+
     if (availableQuestions.length === 0) {
-        updateQuestionPool(); // Reset pool when all questions are used
-        availableQuestions = questionPool.filter(q => !usedQuestions.has(q.question));
+        usedQuestions.clear(); // Allow repeating when all have been used
+        availableQuestions = [...questionPool];
     }
 
     currentQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
-    usedQuestions.add(currentQuestion.question); // Mark as used
-    
+    usedQuestions.add(currentQuestion.question);
+
     questionElement.innerText = currentQuestion.question;
 
     choices.forEach((choice, index) => {
