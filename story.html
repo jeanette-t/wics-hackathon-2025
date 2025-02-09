@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create Your Story</title>
+   <link rel="stylesheet" href="story.css">
+</head>
+<body>
+   <div class="container">
+       <h1>Personalized Story Generator</h1>
+       <form action=“groq_api.py" method="post">
+           <label for="name">What's your name?</label>
+           <input type="text" id="name" name="name" required>
+
+           <label for="color">What's your favorite color?</label>
+           <input type="text" id="color" name="color" required>
+
+           <label for="animal">What's your favorite animal?</label>
+           <input type="text" id="animal" name="animal" required>
+
+           <label for="place">Name a place you'd like to visit:</label>
+           <input type="text" id="place" name="place" required>
+
+           <button type="submit">Generate Story</button>
+       </form>
+
+       <div class="story-output">
+           <h2>Your Story:</h2>
+           <p id="story">
+               <!-- The generated story will appear here -->
+           </p>
+       </div>
+   </div>
+</body>
+</html>
