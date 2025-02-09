@@ -1,0 +1,70 @@
+/* Western-Themed CSS */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #f4e1c6;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png'); /* Wood texture */
+    margin: 0;
+    padding: 0;
+    color: #5a3e1b;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff8dc;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid #8b5a2b;
+    text-align: center;
+}
+
+h1 {
+    color: #8b0000;
+    font-family: 'Old West', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #5a3e1b;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8b5a2b;
+    border-radius: 5px;
+    background-color: #fdf6e3;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #8b0000;
+    color: white;
+    border: 2px solid #5a3e1b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'Old West';
+    src: url('https://fonts.cdnfonts.com/s/14986/Wild%20West.woff') format('woff');
+}
