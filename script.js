@@ -96,7 +96,7 @@ function getNewQuestion() {
     currentQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     usedQuestions.add(currentQuestion.question); // Mark as used
     
-    questionElementl.innerText = (usedQuestions.size+1) + ". " + currentQuestion.question;
+    questionElement.innerText = (usedQuestions.size+1) + ". " + currentQuestion.question;
 
     choices.forEach((choice, index) => {
         choice.innerText = currentQuestion["choice" + (index + 1)];
