@@ -82,7 +82,7 @@ button:hover {
     width:0%;
     transition: all ease-in-out 0.5s;
 }    
-#score {
+h3 {
     font-size: 20px;
     margin-top: 15px;
     font-weight: bold;
@@ -98,6 +98,9 @@ button:hover {
     margin-bottom: 10px;
 }
 
+span {
+    display: flex;
+}
 .quiz-container {
     position: relative;
 }
