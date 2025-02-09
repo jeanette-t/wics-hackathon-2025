@@ -66,6 +66,9 @@ function startQuiz() {
 }
 
 function updateQuestionPool() {
+    // Clear previous used questions when switching difficulty
+    usedQuestions.clear(); 
+
     if (currentDifficulty === "easy") {
         questionPool = [...easyQuestions];
     } else if (currentDifficulty === "medium") {
@@ -73,10 +76,6 @@ function updateQuestionPool() {
     } else if (currentDifficulty === "hard") {
         questionPool = [...hardQuestions];
     }
-
-    // if (prevDifficulty !== currentDifficulty) {
-    //     usedQuestions.clear();
-    // }
 }
 
 function getNewQuestion() {
@@ -135,11 +134,13 @@ choices.forEach(choice => {
             } else if (currentDifficulty === "medium") {
                 currentDifficulty = "hard";
             }
-            
+        
             // Reset streaks after updating difficulty
             correctStreak = 0; // Reset correct streak after updating difficulty
             incorrectStreak = 0;
-            updateQuestionPool(); // Update question pool with new difficulty
+            
+            // Update question pool with new difficulty
+            updateQuestionPool(); 
         } 
         
         // Adjust difficulty after 2 incorrect answers in a row
@@ -150,11 +151,13 @@ choices.forEach(choice => {
             } else {
                 currentDifficulty = "easy";
             }
-            
+        
             // Reset streaks after updating difficulty
             incorrectStreak = 0; // Reset incorrect streak after updating difficulty
             correctStreak = 0;
-            updateQuestionPool(); // Update question pool with new difficulty
+            
+            // Update question pool with new difficulty
+            updateQuestionPool();
         }
 
         selectedChoice.classList.add(classToApply);
