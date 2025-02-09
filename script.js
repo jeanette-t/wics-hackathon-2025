@@ -126,21 +126,23 @@ choices.forEach(choice => {
             correctStreak = 0; // Reset correct streak
         }
 
-        // Adjust difficulty after 3 correct/incorrect answers in a row
-        if (correctStreak === 2 && currentDifficulty !== "hard") {
+        // Adjust difficulty after 2 correct/incorrect answers in a row
+        if (correctStreak === 2 && currentDifficulty !== "hard" && incorrectStreak === 0) {
             // Move from easy -> medium or medium -> hard
             currentDifficulty = currentDifficulty === "easy" ? "medium" : "hard";
             prevDifficulty = currentDifficulty; // Update previous difficulty
             correctStreak = 0; // Reset correct streak after updating difficulty
+            incorrectStreak = 0;
             updateQuestionPool(); // Update question pool with new difficulty
         } 
 
         // Adjust difficulty after 2 incorrect answers in a row
-        else if (incorrectStreak === 2 && currentDifficulty !== "easy") {
+        else if (incorrectStreak === 2 && currentDifficulty !== "easy" && correctStreak !== 0) {
             // Move from hard -> medium or medium -> easy
             currentDifficulty = currentDifficulty === "hard" ? "medium" : "easy";
             prevDifficulty = currentDifficulty; // Update previous difficulty
             incorrectStreak = 0; // Reset incorrect streak after updating difficulty
+            correctStreak = 0
             updateQuestionPool(); // Update question pool with new difficulty
         }
 
