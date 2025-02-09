@@ -1,0 +1,57 @@
+/* Western-Themed Styles */
+body {
+    font-family: 'Georgia', serif; /* Classic western-style serif */
+    background-color: #f4e1c1; /* Warm parchment color */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Rustic container with western-style border */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff8e1; /* Aged paper look */
+    border: 4px solid #8b4513; /* Dark saddle brown border */
+    border-radius: 12px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Western-style heading */
+h1 {
+    font-family: 'Courier New', monospace; /* Wanted-poster, typewriter effect */
+    color: #5a2d0c; /* Deep western brown */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Paragraph styling */
+p {
+    color: #4a2c14;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button styling - Western Blue */
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #1f487e; /* Deep denim blue */
+    color: white;
+    border: 2px solid #5a2d0c; /* Dark brown border */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif; /* Keeps the Western aesthetic */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #15395b;
+    border-color: #3a1f0b;
+    transform: scale(1.05);
+}
