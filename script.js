@@ -128,23 +128,32 @@ choices.forEach(choice => {
         }
         scoreElement.innerText= score;
 
-        // Adjust difficulty after 2 correct/incorrect answers in a row
         if (correctStreak === 2 && currentDifficulty !== "hard" && incorrectStreak === 0) {
             // Move from easy -> medium or medium -> hard
-            currentDifficulty = currentDifficulty === "easy" ? "medium" : "hard";
+            if (currentDifficulty === "easy") {
+                currentDifficulty = "medium";
+            } else {
+                currentDifficulty = "hard";
+            }
+            
             prevDifficulty = currentDifficulty; // Update previous difficulty
             correctStreak = 0; // Reset correct streak after updating difficulty
             incorrectStreak = 0;
             updateQuestionPool(); // Update question pool with new difficulty
         } 
-
+        
         // Adjust difficulty after 2 incorrect answers in a row
         else if (incorrectStreak === 2 && currentDifficulty !== "easy" && correctStreak !== 0) {
             // Move from hard -> medium or medium -> easy
-            currentDifficulty = currentDifficulty === "hard" ? "medium" : "easy";
+            if (currentDifficulty === "hard") {
+                currentDifficulty = "medium";
+            } else {
+                currentDifficulty = "easy";
+            }
+            
             prevDifficulty = currentDifficulty; // Update previous difficulty
             incorrectStreak = 0; // Reset incorrect streak after updating difficulty
-            correctStreak = 0
+            correctStreak = 0;
             updateQuestionPool(); // Update question pool with new difficulty
         }
 
