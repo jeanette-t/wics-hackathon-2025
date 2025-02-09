@@ -28,9 +28,9 @@ h1, h2 {
 
 button {
     display: block;
-    width: 70%;
-    padding-left: 50px;
-    margin: 10px 0;
+    width: 50%;
+    max-width: 300px;
+    margin: 10px auto;
     border: none;
     font-size: 18px;
     font-weight: bold;
