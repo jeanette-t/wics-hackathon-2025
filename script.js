@@ -73,9 +73,9 @@ function updateQuestionPool() {
         questionPool = [...hardQuestions];
     }
 
-    if (prevDifficulty !== currentDifficulty) {
-        usedQuestions.clear();
-    }
+    // if (prevDifficulty !== currentDifficulty) {
+    //     usedQuestions.clear();
+    // }
 }
 
 function getNewQuestion() {
