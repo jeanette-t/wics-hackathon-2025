@@ -40,12 +40,12 @@ fieldset {
 
 legend {
     font-family: 'Rye', cursive;
-    font-size: 1.4rem;
+    font-size: 8px;
     color: #4b2e1c;
 }
 
 label {
-    font-size: 1.2rem;
+    font-size: 8px;
     display: block;
     cursor: pointer;
 }
@@ -55,10 +55,9 @@ input[type="radio"] {
 }
 
 button {
-    background: linear-gradient(to bottom, #8B4513, #5a3210);
+    background: linear-gradient(to bottom, #8B4513, #6b3c14);
     color: white;
-    font-family: 'Special Elite', cursive;
-    font-size: 1.2rem;
+    font-size: 8px;
     padding: 10px 20px;
     border: 3px solid #4b2e1c;
     border-radius: 8px;
