@@ -30,8 +30,8 @@ button {
     display: block;
     width: 100%;
     max-width: 700px;
-    max-height: 150px;
-    margin: 10px 500px;
+    max-height: 300px;
+    margin: 30px 500px;
     border: none;
     font-size: 18px;
     font-weight: bold;
