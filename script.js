@@ -143,7 +143,7 @@ choices.forEach(choice => {
         } 
         
         // Adjust difficulty after 2 incorrect answers in a row
-        else if (incorrectStreak === 2 && currentDifficulty !== "easy" && correctStreak !== 0) {
+        else if (incorrectStreak === 2 && currentDifficulty !== "easy") {
             // Move from hard -> medium or medium -> easy
             if (currentDifficulty === "hard") {
                 currentDifficulty = "medium";
