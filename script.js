@@ -84,6 +84,12 @@ function updateQuestionPool() {
 }
 
 function getNewQuestion() {
+    if (questionCount >= MAX_QUESTIONS) {
+        localStorage.setItem("totalScore", score);
+        window.location.href = "results.html"; // Redirect to results page
+        return;
+    }
+
     if (questionPool.length === 0 || usedQuestions.size >= MAX_QUESTIONS) {
         localStorage.setItem("totalScore", score);
         // Show the results button instead of redirecting
