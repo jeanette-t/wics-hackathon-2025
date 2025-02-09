@@ -46,6 +46,7 @@ let questionPool = [...mediumQuestions]; // Initial question pool
 let usedQuestions = new Set(); // Track asked questions
 
 const questionElement = document.querySelector("#question");
+const scoreElement = document.querySelector("#score");
 const choices = Array.from(document.querySelectorAll(".btn"));
 const progressBar = document.querySelector("#progress-bar");
 
@@ -113,9 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
 choices.forEach(choice => {
     choice.addEventListener("click", (e) => {
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["data-number"];
+        const selectedAnswer = selectedChoice.dataset.number;
 
-        const classToApply = selectedAnswer == currentQuestion.correct ? "correct" : "incorrect";
+        const classToApply = parseInt(selectedAnswer) === currentQuestion.correct ? "correct" : "incorrect";
 
         if (selectedAnswer == currentQuestion.correct) {
             score++;
@@ -125,6 +126,7 @@ choices.forEach(choice => {
             incorrectStreak++;
             correctStreak = 0; // Reset correct streak
         }
+        scoreElement.innerText= score;
 
         // Adjust difficulty after 2 correct/incorrect answers in a row
         if (correctStreak === 2 && currentDifficulty !== "hard" && incorrectStreak === 0) {
