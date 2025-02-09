@@ -1,6 +1,14 @@
 body {
    font-family: 'Georgia', serif;
    background-image: url('story-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;  /* This prevents the background from scrolling */
+    background-repeat: no-repeat;  /* This prevents the image from repeating */
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #5d4b63;
    min-height: 100vh;
    margin: 0;
    padding: 20px;
