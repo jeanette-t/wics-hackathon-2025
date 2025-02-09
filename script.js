@@ -19,7 +19,7 @@ const easyQuestions = [
 const mediumQuestions = [
     { question: "MEDIUM: _______ washing his sweater, Jacob hung it up to dry", choice1: "After", choice2: "Before", choice3: "By", choice4: "Until", correct: 1 },
     { question: "MEDIUM: _______ you get a new haircut?", choice1: "Have", choice2: "Does", choice3: "Are", choice4: "Did", correct: 4 },
-    { question: "MEDIUM: _______ The first letter of the first word in a sentence should be", 
+    { question: "MEDIUM: The first letter of the first word in a sentence should be", 
         choice1: "a lowercase letter", 
         choice2: "an uppercase letter", 
         choice3: "a large letter", 
@@ -41,7 +41,7 @@ const hardQuestions = [
 ];
 
 let prevDifficulty = "medium";
-let currentDifficulty = "medium"; // Start at medium difficulty
+let currentDifficulty = "medium"; // Start at easy difficulty
 let questionPool = [...mediumQuestions]; // Initial question pool
 let usedQuestions = new Set(); // Track asked questions
 
