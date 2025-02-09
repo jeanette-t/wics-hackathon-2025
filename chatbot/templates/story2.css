@@ -1,90 +1,73 @@
-/* Import a Western-style font */
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Special+Elite&display=swap');
 
 body {
+    background-color: #F4E1C6; 
+    font-family: 'Georgia', serif;
+    color: #4b2e1c;
     font-family: 'Special Elite', cursive;
-    background-color: #f4e5c2;
-    color: #3e2f1b;
-    margin: 0;
-    padding: 0;
+    padding: 20px;
     text-align: center;
-    background-image: url('https://www.transparenttextures.com/patterns/old-wall.png'); /* Subtle texture */
 }
 
 h1 {
-    font-family: 'Rock Salt', cursive;
-    font-size: 36px;
-    color: #7a4419;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    border-bottom: 4px solid #7a4419;
-    display: inline-block;
-    padding-bottom: 10px;
+    font-size: 15px;
+    color: #8B4513;
+    text-shadow: 3px 3px 0 
 }
 
 h2 {
-    font-family: 'Rock Salt', cursive;
-    font-size: 28px;
-    color: #5c3317;
+    font-size: 13px;
+    color: #5a3210;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    background-color: rgba(255, 255, 255, 0.8);
+p{
+    font-size: 11px;
+    background: #ffefc9cc;
+    padding: 15px;
+    border: 2px solid #8B4513;
+    border-radius: 10px;
     display: inline-block;
-    padding: 10px;
-    border-radius: 5px;
+    max-width: 80%;
+    text-align: justify;
 }
-
 fieldset {
-    background-color: #fff8dc;
-    border: 3px solid #7a4419;
+    background: rgba(255, 239, 201, 0.9);
+    border: 3px solid #8B4513;
     border-radius: 8px;
     padding: 15px;
-    margin: 10px auto;
-    display: inline-block;
-    text-align: left;
-    max-width: 600px;
+    max-width: 70%;
+    margin: 15px auto;
 }
 
 legend {
-    font-family: 'Rock Salt', cursive;
-    color: #5c3317;
-    font-size: 20px;
-    font-weight: bold;
+    font-family: 'Rye', cursive;
+    font-size: 1.4rem;
+    color: #4b2e1c;
 }
 
 label {
-    font-size: 18px;
-    color: #3e2f1b;
+    font-size: 1.2rem;
+    display: block;
     cursor: pointer;
 }
 
 input[type="radio"] {
     margin-right: 8px;
-    transform: scale(1.2);
 }
 
 button {
-    font-family: 'Rock Salt', cursive;
-    font-size: 18px;
-    background-color: #b5651d;
+    background: linear-gradient(to bottom, #8B4513, #5a3210);
     color: white;
-    border: none;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2rem;
     padding: 10px 20px;
-    border-radius: 5px;
+    border: 3px solid #4b2e1c;
+    border-radius: 8px;
     cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 3px 3px 0px #7a4419;
-    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 0 #3b1e10;
+    transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #7a4419;
-    box-shadow: 5px 5px 0px #5c3317;
-}
-
-button:active {
-    transform: translateY(2px);
-    box-shadow: 2px 2px 0px #5c3317;
+    background: linear-gradient(to bottom, #5a3210, #3b1e10);
+    transform: translateY(-2px);
 }

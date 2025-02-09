@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Story</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='personalized.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Western Story</title>
+    <link rel="stylesheet" href="story2.css">
 </head>
 <body>
     <h1>Your Western Story</h1>
 
-    <p>{{ story }}</p>  </p>
+    <p>{{ story }}</p>
 
     <h2>Comprehension Quiz</h2>
     <form action="{{ url_for('comprehension') }}" method="POST">
