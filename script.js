@@ -55,6 +55,7 @@ let score = 0;
 let correctStreak = 0;
 let incorrectStreak = 0;
 const MAX_QUESTIONS = 9;
+let questionCount = 0;
 
 function startQuiz() {
     score = 0;
@@ -107,7 +108,7 @@ function getNewQuestion() {
         choice.innerText = currentQuestion["choice" + (index + 1)];
     });
 
-    progressBar.style.width = ((score / MAX_QUESTIONS) * 100) + "%";
+    progressBar.style.width = ((questionCount / MAX_QUESTIONS) * 100) + "%";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -116,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 choices.forEach(choice => {
     choice.addEventListener("click", (e) => {
+        questionCount++;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
 
