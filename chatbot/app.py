@@ -65,13 +65,37 @@ def generate_western_story(reading_level, user_answers, final=False):
         print("Error calling Groq API:", e)
         return None
 
+# Define comprehension_questions GLOBALLY
+comprehension_questions = {
+    "What was the name of the Sheriff in the story?": {
+        "choices": ["Ethan Blackwood", "John Smith", "William Turner", "James Hawk"],
+        "correct_answer": "Ethan Blackwood"
+    },
+    "What animal did the Sheriff ride?": {
+        "choices": ["Midnight", "Thunder", "Black Stallion", "Shadow"],
+        "correct_answer": "Midnight"
+    },
+    "What was the name of the young wizard in the story?": {  # Example - adjust as needed
+        "choices": ["Finnley", "Harry Potter", "Gandalf", "Luke Skywalker"],
+        "correct_answer": "Finnley"
+    },
+    "Who is the antagonist in the story?": {
+        "choices": ["Blackjack McCoy", "Billy the Kid", "Butch Cassidy", "Doc Holliday"],
+        "correct_answer": "Blackjack McCoy"
+    },
+    "Where is the treasure hidden?": {
+        "choices": ["In the canyon", "In the cave", "In the town", "Under the saloon"],
+        "correct_answer": "in the canyon"  # Or "In the canyon" to be consistent
+    }
+}
+
+
 @app.route('/')
 def home():
     return render_template('personalized.html')
 
 @app.route('/start', methods=['POST'])
 def start():
-    # Handle user input for level and questions
     user_level = request.form['level']
     user_answers = {
         "favorite_color": request.form['favorite_color'],
@@ -79,47 +103,21 @@ def start():
         "favorite_movie_or_book": request.form['favorite_movie_or_book']
     }
 
-    # Generate the story based on user inputs
     story = generate_western_story(user_level, user_answers, final=False)
 
     if story:
-        return render_template('story.html', story=story, level=user_level, user_answers=user_answers)
+        return render_template('story2.html', story=story, level=user_level, user_answers=user_answers, comprehension_questions=comprehension_questions)  # Pass comprehension_questions!
     else:
         return "Something went wrong. Please try again later."
 
+
 @app.route('/comprehension', methods=['POST'])
 def comprehension():
-    # Handle comprehension quiz responses
     user_comprehension_answers = request.form.to_dict()
 
-    comprehension_questions = {
-        "What was the name of the Sheriff in the story?": {
-            "choices": ["Ethan Blackwood", "John Smith", "William Turner", "James Hawk"],
-            "correct_answer": "Ethan Blackwood"
-        },
-        "What animal did the Sheriff ride?": {
-            "choices": ["Midnight", "Thunder", "Black Stallion", "Shadow"],
-            "correct_answer": "Midnight"
-        },
-        "What was the name of the young wizard in the story?": {
-            "choices": ["Finnley", "Harry Potter", "Gandalf", "Luke Skywalker"],
-            "correct_answer": "Finnley"
-        },
-        "Who is the antagonist in the story?": {
-            "choices": ["Blackjack McCoy", "Billy the Kid", "Butch Cassidy", "Doc Holliday"],
-            "correct_answer": "Blackjack McCoy"
-        },
-        "Where is the treasure hidden?": {
-            "choices": ["In the canyon", "In the cave", "In the town", "Under the saloon"],
-            "correct_answer": "in the canyon"
-        }
-    }
-
-    # Check the answers
     correct_count = check_comprehension_answers(user_comprehension_answers, 
-                                                {q: data['correct_answer'] for q, data in comprehension_questions.items()})
+                                                {q: data['correct_answer'] for q, data in comprehension_questions.items()}) # Use the global comprehension_questions
 
-    # Determine next level
     if correct_count >= 4:
         return redirect(url_for('level_up'))
     else:

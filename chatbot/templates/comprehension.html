@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Story</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehension Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Your Western Story</h1>
+    <h1>Comprehension Quiz</h1>
 
-    <p>{{ story }}</p>  </p>
-
-    <h2>Comprehension Quiz</h2>
     <form action="{{ url_for('comprehension') }}" method="POST">
-        {% for question, data in comprehension_questions.items() %}  <fieldset>
+        {% for index, (question, data) in enumerated_questions %}
+            <fieldset>
                 <legend>{{ question }}</legend>
                 {% for choice in data['choices'] %}
                     <label>
@@ -19,9 +20,8 @@
                 {% endfor %}
             </fieldset>
         {% endfor %}
+
         <button type="submit">Submit Answers</button>
     </form>
-
-
 </body>
 </html>
