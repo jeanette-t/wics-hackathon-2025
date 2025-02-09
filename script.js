@@ -126,17 +126,17 @@ choices.forEach(choice => {
             incorrectStreak++;
             correctStreak = 0; // Reset correct streak
         }
-        scoreElement.innerText = score;
+        scoreElement.innerText= score;
 
-        if (correctStreak === 2 && currentDifficulty !== "hard" && incorrectStreak === 0) {
+        if (correctStreak === 2) {
             // Move from easy -> medium or medium -> hard
             if (currentDifficulty === "easy") {
                 currentDifficulty = "medium";
-            } else {
+            } else if (currentDifficulty === "medium") {
                 currentDifficulty = "hard";
             }
             
-            prevDifficulty = currentDifficulty; // Update previous difficulty
+            // Reset streaks after updating difficulty
             correctStreak = 0; // Reset correct streak after updating difficulty
             incorrectStreak = 0;
             updateQuestionPool(); // Update question pool with new difficulty
@@ -151,7 +151,7 @@ choices.forEach(choice => {
                 currentDifficulty = "easy";
             }
             
-            prevDifficulty = currentDifficulty; // Update previous difficulty
+            // Reset streaks after updating difficulty
             incorrectStreak = 0; // Reset incorrect streak after updating difficulty
             correctStreak = 0;
             updateQuestionPool(); // Update question pool with new difficulty
