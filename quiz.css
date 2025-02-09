@@ -28,8 +28,8 @@ h1, h2 {
 
 button {
     display: block;
-    width: 70%;
-    max-width: 700px;
+    width: 100%;
+    max-width: 400px;
     margin: 10px auto;
     border: none;
     font-size: 18px;
