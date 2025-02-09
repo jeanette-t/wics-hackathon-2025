@@ -42,8 +42,7 @@ def generate_western_story(reading_level, user_answers, final=False):
                 "   - **Beginner**: Simple sentences, basic vocabulary, and a **rancher** as the main character.\n"
                 "   - **Intermediate**: Moderate complexity, richer vocabulary, and a **cowboy** as the main character.\n"
                 "   - **Advanced**: Sophisticated language, deeper themes, and a **sheriff** as the main character.\n\n"
-                "4️⃣ Ensure the story is engaging and interactive. Ask the user occasional reading comprehension questions based on the written story to keep them engaged.\n"
-                "5️⃣ Encourage reading growth by subtly integrating comprehension prompts and vocabulary explanations at the end."
+                "4️⃣ Ensure the story is engaging, but do NOT ask the user any questions. The story should NOT end with a choice or a question—it must be a complete narrative."
             )
         },
         {
