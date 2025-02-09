@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild West Adventure</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h1 { color: #333; }
+        label, input, select { display: block; width: 100%; margin-bottom: 10px; padding: 10px; font-size: 16px; }
+        button { padding: 10px 15px; font-size: 16px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .question { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Wild West Adventure</h1>
+        <p>Answer a few questions and select your level to start your adventure.</p>
+
+        <form action="/start" method="POST">
+            <div class="question">
+                <label for="level">Choose your level:</label>
+                <select name="level" id="level" required>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="favorite_color">What’s your favorite color?</label>
+                <input type="text" name="favorite_color" id="favorite_color" required>
+            </div>
+            <div class="question">
+                <label for="favorite_celebrity">Who is your favorite celebrity?</label>
+                <input type="text" name="favorite_celebrity" id="favorite_celebrity" required>
+            </div>
+            <div class="question">
+                <label for="favorite_movie_or_book">What’s your favorite movie or book?</label>
+                <input type="text" name="favorite_movie_or_book" id="favorite_movie_or_book" required>
+            </div>
+            <button type="submit">Start Adventure</button>
+        </form>
+    </div>
+</body>
+</html>
