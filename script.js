@@ -67,7 +67,7 @@ function startQuiz() {
 
 function updateQuestionPool() {
     // Clear previous used questions when switching difficulty
-    usedQuestions.clear(); 
+    // usedQuestions.clear(); 
 
     if (currentDifficulty === "easy") {
         questionPool = [...easyQuestions];
@@ -75,6 +75,10 @@ function updateQuestionPool() {
         questionPool = [...mediumQuestions];
     } else if (currentDifficulty === "hard") {
         questionPool = [...hardQuestions];
+    }
+
+    if (prevDifficulty !== currentDifficulty) {
+        usedQuestions.clear(); 
     }
 }
 
