@@ -9,8 +9,8 @@ app = Flask(__name__)
 GROQ_API_KEY = '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'
 groq = Groq(api_key=GROQ_API_KEY)
 
-def personalized():
-    return render_template("personalized.html")
+# def personalized():
+#     return render_template("personalized.html")
 
 # Define a function to check answers
 def check_comprehension_answers(user_answers, correct_answers):
